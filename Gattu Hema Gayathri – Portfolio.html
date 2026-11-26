@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gattu Hema Gayathri – Software Developer Portfolio</title>
+<meta name="description" content="Portfolio of Gattu Hema Gayathri: full-stack developer and deep learning enthusiast.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#eef3f8;--surface:#ffffff;--ink:#14213d;--muted:#4b5a74;--line:#cfd9e6;--accent:#0e7c7b;--accent-ink:#ffffff;--mark:#f2b134;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1829;--surface:#18243b;--ink:#eaf0fa;--muted:#a3b2cc;--line:#2b3b58;--accent:#4fd1c5;--accent-ink:#0f1829;--mark:#f2b134;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1829;--surface:#18243b;--ink:#eaf0fa;--muted:#a3b2cc;--line:#2b3b58;--accent:#4fd1c5;--accent-ink:#0f1829;--mark:#f2b134;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--mark);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+header.top{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center;justify-content:space-between;padding:1.1rem 0}
+.brand{font:800 1.15rem "Bricolage Grotesque",sans-serif;text-decoration:none;color:var(--ink)}
+nav{display:flex;flex-wrap:wrap;gap:.25rem 1.1rem;align-items:center}
+nav a{color:var(--muted);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--ink)}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:.3rem .8rem;font:inherit;font-size:.9rem;cursor:pointer}
+.hero{padding:4rem 0 3.5rem}
+.hero h1{font-size:clamp(2.8rem,9vw,6.5rem);font-weight:800;letter-spacing:-.03em}
+.hero h1 span{display:block;background:linear-gradient(transparent 62%,var(--mark) 62% 92%,transparent 92%);width:fit-content;max-width:100%}
+.role{font:500 clamp(1.15rem,2.6vw,1.6rem)/1.35 "Bricolage Grotesque",sans-serif;margin:1.5rem 0 .5rem;max-width:34rem}
+.lead{color:var(--muted);max-width:38rem;margin:0 0 1.75rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.7rem 1.3rem;border-radius:.6rem;font-weight:600;text-decoration:none;border:2px solid var(--accent);background:var(--accent);color:var(--accent-ink);cursor:pointer;font-family:inherit;font-size:1rem}
+.btn.alt{background:transparent;color:var(--accent)}
+section{padding:3rem 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1.5rem}
+.about{display:grid;gap:2rem;grid-template-columns:1fr}
+.facts{margin:0;padding:0;list-style:none;display:grid;gap:.9rem}
+.facts li{background:var(--surface);border:1px solid var(--line);border-radius:.8rem;padding:1rem 1.2rem}
+.facts b{display:block;font:700 1.5rem "Bricolage Grotesque",sans-serif}
+.facts small{color:var(--muted)}
+@media(min-width:760px){.about{grid-template-columns:1.4fr 1fr}}
+.skills{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.skills h3{font-size:1.1rem;margin-bottom:.6rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:0;padding:0;list-style:none}
+.chips li{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.2rem .75rem;font-size:.92rem}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.filters button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:.4rem 1rem;font:500 .95rem Figtree,sans-serif;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.projects{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:1.4rem;display:flex;flex-direction:column;gap:.7rem}
+.proj[hidden]{display:none}
+.proj h3{font-size:1.3rem}
+.proj ul{margin:0;padding-left:1.1rem;color:var(--muted)}
+.proj .chips{margin-top:auto;padding-top:.4rem}
+.proj .kind{font-weight:600;color:var(--accent);font-size:.9rem}
+.tl{list-style:none;margin:0;padding:0 0 0 1.4rem;border-left:3px solid var(--mark);display:grid;gap:1.75rem}
+.tl li{position:relative}
+.tl li::before{content:"";position:absolute;left:calc(-1.4rem - 8px);top:.55rem;width:13px;height:13px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.tl .when{color:var(--muted);font-size:.95rem}
+.tl h3{font-size:1.25rem;margin:.1rem 0}
+.tl p{margin:.2rem 0 0;color:var(--muted)}
+.certs{columns:2 16rem;margin:0;padding-left:1.2rem}
+.certs li{margin-bottom:.5rem;break-inside:avoid}
+form{display:grid;gap:1rem;max-width:34rem}
+label{display:grid;gap:.3rem;font-weight:600}
+input,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:.6rem;padding:.65rem .8rem;width:100%}
+textarea{min-height:8rem;resize:vertical}
+.contact{display:grid;gap:2rem;grid-template-columns:1fr}
+@media(min-width:760px){.contact{grid-template-columns:1fr 1fr}}
+.links{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+.note{font-size:.9rem;color:var(--muted);margin:0}
+footer{padding:2rem 0 2.5rem;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="#top">Hema Gayathri</a>
+  <nav aria-label="Sections">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    <button id="theme" type="button" aria-label="Switch between light and dark theme">Dark mode</button>
+  </nav>
+</header>
+
+<main id="top">
+<div class="hero">
+  <h1>Gattu<span>Hema Gayathri</span></h1>
+  <p class="role">Final-year Computer Science student building full-stack apps and deep learning tools.</p>
+  <p class="lead">I work with Python, Java and Flask, and I’m looking for a software development role where I can keep shipping real projects.</p>
+  <div class="btns">
+    <a class="btn" href="#projects">See my projects</a>
+    <a class="btn alt" href="#contact">Get in touch</a>
+  </div>
+</div>
+</main>
+</div>
+
+<section id="about"><div class="wrap">
+  <h2>About</h2>
+  <div class="about">
+    <div>
+      <p>I’m a B.Tech student in Computer Science &amp; Engineering at St. Ann’s College of Engineering &amp; Technology, graduating in 2026. I enjoy turning an idea into a working product, from the database and API to the screen people actually use.</p>
+      <p>My projects range from a CNN that estimates food calories from photos to a peer review portal with role-based access. During my Java Full Stack internship at Brain O Vision I worked in an Agile team on real-time projects with Java and SQL.</p>
+    </div>
+    <ul class="facts">
+      <li><b>8.37 / 10</b><small>CGPA, B.Tech CSE (2022–2026)</small></li>
+      <li><b>4 projects</b><small>Deep learning, Flask web apps, AI chatbot</small></li>
+      <li><b>Chirala, AP</b><small>Open to software development roles</small></li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><h3>Languages</h3><ul class="chips"><li>Java</li><li>Python</li><li>C</li><li>JavaScript</li></ul></div>
+    <div><h3>Frontend and backend</h3><ul class="chips"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Flask</li><li>REST APIs</li></ul></div>
+    <div><h3>Databases</h3><ul class="chips"><li>MySQL</li><li>MongoDB</li></ul></div>
+    <div><h3>AI and machine learning</h3><ul class="chips"><li>CNN</li><li>Image preprocessing</li><li>Feature extraction</li><li>Scikit-learn</li><li>Pandas</li><li>NumPy</li></ul></div>
+    <div><h3>Tools</h3><ul class="chips"><li>Git</li><li>GitHub</li><li>VS Code</li><li>Postman</li></ul></div>
+    <div><h3>Working style</h3><ul class="chips"><li>Problem solving</li><li>Team collaboration</li><li>Communication</li><li>Adaptability</li></ul></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <div class="filters" role="group" aria-label="Filter projects">
+    <button type="button" data-f="all" aria-pressed="true">All</button>
+    <button type="button" data-f="ai" aria-pressed="false">AI</button>
+    <button type="button" data-f="web" aria-pressed="false">Web apps</button>
+  </div>
+  <div class="projects">
+    <article class="proj" data-t="ai">
+      <span class="kind">Deep learning</span>
+      <h3>Food Calorie Estimation</h3>
+      <ul>
+        <li>Identifies food items from images and estimates calories with CNN models trained on real-world food datasets.</li>
+        <li>Uses preprocessing, data augmentation and feature extraction to improve accuracy and generalization.</li>
+        <li>Includes an interface for daily calorie tracking.</li>
+      </ul>
+      <ul class="chips"><li>Python</li><li>CNN</li><li>TensorFlow/Keras</li><li>OpenCV</li></ul>
+    </article>
+    <article class="proj" data-t="ai web">
+      <span class="kind">AI chatbot</span>
+      <h3>SmartAssist</h3>
+      <ul>
+        <li>Answers questions in natural language across general knowledge and academic topics using the Google Gemini API.</li>
+        <li>Flask backend handles the API calls; the responsive frontend supports real-time conversation.</li>
+      </ul>
+      <ul class="chips"><li>Python</li><li>Flask</li><li>Gemini API</li><li>HTML/CSS</li></ul>
+    </article>
+    <article class="proj" data-t="web">
+      <span class="kind">Full-stack web app</span>
+      <h3>Student Review Peer Portal</h3>
+      <ul>
+        <li>Students submit assignments and give peer reviews with ratings and feedback.</li>
+        <li>Secure sign-in with role-based access for students and reviewers.</li>
+        <li>Responsive frontend connected to a MySQL database through REST APIs.</li>
+      </ul>
+      <ul class="chips"><li>Python</li><li>Flask</li><li>MySQL</li><li>JavaScript</li></ul>
+    </article>
+    <article class="proj" data-t="web">
+      <span class="kind">Full-stack web app</span>
+      <h3>Personal Expense Tracker</h3>
+      <ul>
+        <li>Tracks daily income and expenses with category breakdowns and monthly summaries.</li>
+        <li>Full create, read, update and delete operations on a MySQL backend.</li>
+      </ul>
+      <ul class="chips"><li>Python</li><li>Flask</li><li>MySQL</li><li>HTML/CSS</li></ul>
+    </article>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience and education</h2>
+  <ol class="tl">
+    <li><span class="when">2024</span><h3>Java Full Stack Intern, Brain O Vision</h3><p>Built real-time projects with Java and SQL in an Agile team, covering backend logic, database queries and API integration.</p></li>
+    <li><span class="when">2022 – 2026</span><h3>B.Tech, Computer Science &amp; Engineering</h3><p>St. Ann’s College of Engineering &amp; Technology. CGPA 8.37 / 10.</p></li>
+    <li><span class="when">2020 – 2022</span><h3>Intermediate (MPC)</h3><p>Sri Gowthami Junior College. CGPA 8.34 / 10.</p></li>
+  </ol>
+</div></section>
+
+<section id="certs"><div class="wrap">
+  <h2>Certifications</h2>
+  <ul class="certs">
+    <li>Python 101 for Data Science, IBM</li>
+    <li>Programming in Java, NPTEL/SWAYAM</li>
+    <li>SAWIT.AI Learnathon, GUVI</li>
+    <li>Data Science using Python, Brain O Vision</li>
+    <li>Advanced Excel &amp; PowerPoint, ExcelR</li>
+  </ul>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2>Contact</h2>
+  <div class="contact">
+    <form id="cf">
+      <label>Your name<input id="n" name="name" required autocomplete="name"></label>
+      <label>Your email<input id="e" name="email" type="email" required autocomplete="email"></label>
+      <label>Message<textarea id="m" name="message" required></textarea></label>
+      <button class="btn" type="submit">Send message</button>
+      <p class="note">This opens your email app with the message filled in, addressed to Hema.</p>
+    </form>
+    <div>
+      <ul class="links">
+        <li><a href="mailto:hemagayathrigattu@gmail.com">hemagayathrigattu@gmail.com</a></li>
+        <li><a href="tel:+918247214848">+91 82472 14848</a></li>
+        <li><a href="https://www.linkedin.com/in/hemagayathrigattu" target="_blank" rel="noopener noreferrer">LinkedIn: hemagayathrigattu</a></li>
+        <li>Chirala, Andhra Pradesh</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Gattu Hema Gayathri</div></footer>
+
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('theme');
+  function isDark(){var t=root.getAttribute('data-theme');return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches}
+  function label(){btn.textContent=isDark()?'Light mode':'Dark mode'}
+  btn.addEventListener('click',function(){root.setAttribute('data-theme',isDark()?'light':'dark');label()});
+  label();
+  var fb=document.querySelectorAll('.filters button'),cards=document.querySelectorAll('.proj');
+  fb.forEach(function(b){b.addEventListener('click',function(){
+    fb.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    cards.forEach(function(c){c.hidden=!(b.dataset.f==='all'||c.dataset.t.split(' ').indexOf(b.dataset.f)>-1)});
+  })});
+  document.getElementById('cf').addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var n=document.getElementById('n').value,e=document.getElementById('e').value,m=document.getElementById('m').value;
+    var body=m+'\n\nFrom: '+n+' ('+e+')';
+    location.href='mailto:hemagayathrigattu@gmail.com?subject='+encodeURIComponent('Portfolio message from '+n)+'&body='+encodeURIComponent(body);
+  });
+})();
+</script>
+</body>
+</html>
